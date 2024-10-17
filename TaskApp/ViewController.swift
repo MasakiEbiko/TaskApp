@@ -26,17 +26,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        /*if searchBar.text?.count == 0 { // 検索されている文字列がない時
-            configureTableView()
-            DispatchQueue.main.async {
-                searchBar.resignFirstResponder()
-            }
-        } else {
-            //taskArrayにフィルタリングした結果を格納する
-            let tasks = realm.objects(Task.self)
-            self.taskArray = tasks.where{ $0.category.contains(searchBar.text!) }
-        }
-        tableView.reloadData()*/
         self.filtering(searchBar.text, searchBar)
     }
     
